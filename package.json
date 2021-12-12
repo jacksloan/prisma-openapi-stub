@@ -1,0 +1,31 @@
+{
+    "name": "prisma-openapi-stub",
+    "version": "0.0.1",
+    "description": "Creates an openapi spec from prisma schema",
+    "main": "src/index.ts",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "prisma:g": "node node_modules/prisma/build/index.js generate",
+        "regen": "rm -rf @generated && npm run prisma:g && npm run format"
+    },
+    "keywords": [
+        "prisma",
+        "openapi",
+        "swagger"
+    ],
+    "bin": {
+        "prisma-class-generator": "dist/bin.js"
+    },
+    "author": "Jack Sloan",
+    "license": "ISC",
+    "dependencies": {
+        "@prisma/client": "^3.6.0",
+        "@prisma/generator-helper": "^3.6.0",
+        "@prisma/sdk": "^3.6.0"
+    },
+    "devDependencies": {
+        "@types/node": "^16.11.12",
+        "ts-node": "^10.4.0",
+        "typescript": "^4.5.3"
+    }
+}
